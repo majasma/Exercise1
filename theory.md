@@ -2,10 +2,10 @@ Exercise 1 - Theory questions
 -----------------------------
  
  ### What is the difference between concurrency and parallelism?
- > *Your answer here*
+ > Parallellism is when different processes run at the exact same time, often on different processors. Concurrency is the possibillity of processes happening at the same time, but does not need to use the same amount of time or same duration. 
  
  ### Why have machines become increasingly multicore in the past decade?
- > *Your answer here*
+ > Because we need more computer power to run parallell or concurring processes. 
  
  ### Why do we divide software (programs) into concurrently executing parts (like threads or processes)?
  (Or phrased differently: What problems do concurrency help in solving?)
@@ -16,16 +16,16 @@ Exercise 1 - Theory questions
  > *Your answer here*
  
  ### What is the conceptual difference between threads and processes?
- > *Your answer here*
+ > processes are independent from each other running on independent memory space, while threads are part of processes running on a shared memory space. 
  
  ### Some languages support "fibers" (sometimes called "green threads") or "coroutines"? What are they?
- > *Your answer here*
+ > Green threads scheduled by a virtual machine or a runtime library. Coroutines uses generalized sub-routines to implement tools for handeling concurrency
  
  ### What is the Go-language's "goroutine"? A C/POSIX "pthread"?
  > *Your answer here*
  
  ### In Go, what does `func GOMAXPROCS(n int) int` change? 
- > *Your answer here*
+ > It lets the programmer set themaximum number of CPUs that can be executing simultaneously. 
 
 
 
