@@ -8,21 +8,20 @@ int i = 0;
 void* incrementingThreadFunction(){
     // TODO: increment i 1_000_000 times
 
-    int j = i;
-
-    while (i < j + 1000001) {
+    for (int j = 0; j < 1000000; j++) {
         i++;
-    } 
+    }
+
     return NULL;
 }
 
 void* decrementingThreadFunction(){
     // TODO: decrement i 1_000_000 times
-    int j = i;
 
-    while (i > j - 1000001) {
+    for (int j = 0; j < 1000000; j++) {
         i--;
-    } 
+    }
+
     return NULL;
 }
 
