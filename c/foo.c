@@ -1,4 +1,3 @@
-// Compile with `gcc foo.c -std=c99 -lpthread`, or use the makefile
 
 #include <pthread.h>
 #include <stdio.h>
@@ -8,17 +7,31 @@ int i = 0;
 // Note the return type: void*
 void* incrementingThreadFunction(){
     // TODO: increment i 1_000_000 times
+
+    int j = i;
+
+    while (i < j + 1000001) {
+        i++;
+    } 
     return NULL;
 }
 
 void* decrementingThreadFunction(){
     // TODO: decrement i 1_000_000 times
+    int j = i;
+
+    while (i > j - 1000001) {
+        i--;
+    } 
     return NULL;
 }
 
 
 int main(){
     // TODO: declare incrementingThread and decrementingThread (hint: google pthread_create)
+    pthread_t* incrementingThread; 
+    pthread_t* decrementingThread;
+    
     pthread_create(&incrementingThread, NULL, incrementingThreadFunction, NULL);
     pthread_create(&decrementingThread, NULL, decrementingThreadFunction, NULL);
     
